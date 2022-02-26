@@ -1,10 +1,10 @@
 To package the project
-aws --profile  booklover --region us-east-2 cloudformation package --template-file template.yml --s3-bucket booklovers-app-services --output-template-file packaged-template.yaml
+aws  --region us-east-2 cloudformation package --template-file template.yml --s3-bucket bucket-name --output-template-file packaged-template.yaml
 
 To deploy the project
-aws  --profile  booklover --region us-east-2 cloudformation deploy --template-file packaged-template.yaml --stack-name encrypt-file --capabilities CAPABILITY_IAM
+aws  --region us-east-2 cloudformation deploy --template-file packaged-template.yaml --stack-name encrypt-file --capabilities CAPABILITY_IAM
 
 To remove the stack from your account
-aws --profile  booklover --region us-east-2 cloudformation delete-stack --stack-name encrypt-file
+aws  --region us-east-2 cloudformation delete-stack --stack-name encrypt-file
 
 
