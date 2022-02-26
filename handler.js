@@ -12,7 +12,7 @@ var privateKey = fs.readFileSync('pri.pem', 'utf8')
 
 var iv = Buffer.from(''); //(null) iv 
 var algorithm = 'aes-256-ecb';
-// var password = 'a4e1112f45e84f785358bb86ba750f48'; 
+
 exports.SaveFile = (event, context, callback) => {
     switch (event.httpMethod) {
 
@@ -34,7 +34,7 @@ function saveItem(event, callback) {
 
     let request = JSON.parse(event.body);
     let key = request.key;
-    const type = key.split('.').pop();
+
     let base64String = request.base64String;
 
     var encryptedFile = encryptFile(base64String, publicKey)
