@@ -101,10 +101,10 @@ function getItem(event, callback) {
             })
 
         } else {
-            sendResponse(400, JSON.stringify("File Id not found in qiuery parameters"), callback)
+            sendResponse(400, JSON.stringify("File Id not found in query parameters"), callback)
         }
     } else {
-        sendResponse(400, JSON.stringify("File Id not found in qiuery parameters"), callback)
+        sendResponse(400, JSON.stringify("File Id not found in query parameters"), callback)
 
     }
 
